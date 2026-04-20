@@ -54,3 +54,16 @@ sudo systemctl daemon-reload
 
 sudo systemctl enable --now wazuh-monitor.timer
 ```
+
+# Notes
+Designed for single-node setups
+Uses PushGateway (push model, not scrape-based)
+TLS verification is disabled by default (-k)
+Requires curl and jq
+
+# Security
+
+Restrict access to credentials:
+```
+chmod 600 /root/wazuh-monitor.env
+```
