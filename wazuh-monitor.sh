@@ -13,7 +13,7 @@ LOGIN_ENDPOINT="/security/user/authenticate?raw=true"
 : "${WAZUH_USER:?missing}"
 : "${WAZUH_PASS:?missing}"
 
-PUSHGATEWAY="https://metric.honeydock.de"
+PUSHGATEWAY="https://metric.test.com"
 : "${PUSH_USER:?missing}"
 : "${PUSH_PASS:?missing}"
 JOB_NAME="wazuh_custom_metrics"
