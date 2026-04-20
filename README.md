@@ -6,6 +6,8 @@ Collects operational metrics via the Wazuh API and OpenSearch, then exposes them
 ## Configuration:
 
 edit the exsiting environment file (wazuh-monitor.env)
+edit the pushgateway URL in file 'wazuh-monitor.sh'
+
 # Installation (systemd)
 
 Service:
