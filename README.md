@@ -7,7 +7,16 @@ Collects operational metrics via the Wazuh API and OpenSearch, then exposes them
 
 edit the exsiting environment file (wazuh-monitor.env)
 
-edit the pushgateway URL in file 'wazuh-monitor.sh'
+ * The Wazuh user ia an user for the Wazuh API. The user needs readall permissions
+  
+ * The push user is an user for the Pushgateway
+  
+ * The Indexer User is an user for the Opensearch API
+  
+
+edit the pushgateway URL in the file: 'wazuh-monitor.sh'
+
+
 
 # Installation (systemd)
 
@@ -54,6 +63,17 @@ sudo systemctl daemon-reexec
 sudo systemctl daemon-reload
 
 sudo systemctl enable --now wazuh-monitor.timer
+```
+# normal Console Output when running the script
+```
+[*] Authenticating...
+[*] Cluster metrics...
+[*] Agent overview...
+[*] Group metrics...
+[*] Analysisd metrics...
+[*] Indexer cluster health...
+[*] Pushing to PushGateway...
+[✓] Done.
 ```
 
 # Notes
